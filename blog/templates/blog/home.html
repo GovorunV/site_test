@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+    {% for value in news%}
+        <h2>{{ value.title }}</h2>
+        <p>{{ value.text }}</p>
+        <p>Дата{{ value.date }}</p>
+        {% if value.avtor %}
+        <p>Автор{{ value.avtor }}</p>
+        {% else %}
+        <p>Админ</p>
+        {% endif %}
+    {% endfor %}
+</body>
+</html>
