@@ -1,10 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{{ title }}</title>
-</head>
-<body>
+{% extends 'blog/main.html' %}
+{% block main_news %}
+            <h3>Статьи</h3>
+            <p>В основном и самом популярном режиме культового шутера CS:GO от Valve высокие ранги являются предметом гордости игроков, но их секрет возмутил геймеров.
+  долюкотором Оказалось, что наибольшая доля банов приходится на Global Elite — самый высокий ранг в CS:GO.
+            </p>
+                <div class="p-3 md-3">
+                <img src="http://gamebomb.ru/files/galleries/001/6/65/307732_w625_h351_f.jpg" class="img-thumbnail mb-2">
+                <BR>
+                <button class="btn btn-warning">Кнопка</button>
+            </div>
+{% endblock main_news %}
+{% block main_section %}
     {% for value in news%}
         <h2>{{ value.title }}</h2>
         <p>{{ value.text }}</p>
@@ -15,5 +21,4 @@
         <p>Админ</p>
         {% endif %}
     {% endfor %}
-</body>
-</html>
+{% endblock main_section %}

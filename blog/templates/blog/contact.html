@@ -1,10 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{{ title }}</title>
-</head>
-<body>
-<h1>{{ pi }}</h1>
-</body>
-</html>
+{% extends 'blog/main.html' %}
+{% block main_news %}
+            <h3>Статьи</h3>
+            <p>Собственным рейтингом всех супергероев фильма «Мстители Финал» поделилось известное издание The Independent накануне премьеры фантастического фильма «Мстители 4». Как сообщает Gamebomb.ru, в преддверии выхода самого ожидаемого блокбастера 2019 года, издание составило подробный список всех 27 ключевых героев картины «Мстители Финал» от самого худшего к самым лучшим и интересным героям киновселенной.
+            </p>
+                <div class="p-3 md-3">
+                <img src="http://gamebomb.ru/files/galleries/001/6/65/307732_w625_h351_f.jpg" class="img-thumbnail mb-2">
+                <BR>
+                <button class="btn btn-warning">Кнопка</button>
+            </div>
+{% endblock main_news %}
+{% block main_section %}
+    <h1>{{ pi }}</h1>
+{% endblock main_section %}
