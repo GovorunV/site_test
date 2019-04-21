@@ -9,7 +9,7 @@ def register(request):
         if form.is_valid():
             form.save()
             username = form.cleaned_data.get('username')
-            messages.success(request, f'Пользователь {username} был создан')
+            messages.success(request, f'Пользователь 3 {username} был создан')
             return redirect('blog-home')
 
     else:
