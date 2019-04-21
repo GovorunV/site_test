@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 from math import pi
+from .models import News
 
 news = [
     {
@@ -18,7 +18,7 @@ news = [
 ]
 def home(request): #request обезательно
     date= {
-        'news': news,
+        'news': News.objects.all(),
         'title': 'Гланая страница'
     }
     return render(request, 'blog/home.html', date)

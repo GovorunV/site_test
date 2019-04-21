@@ -14,11 +14,11 @@
     {% for value in news%}
         <h2>{{ value.title }}</h2>
         <p>{{ value.text }}</p>
-        <p>Дата{{ value.date }}</p>
+        <p>{{ value.date|date:"j F Y Время: H:i:s" }}</p>
         {% if value.avtor %}
-        <p>Автор{{ value.avtor }}</p>
+        <p>Автор: {{ value.avtor }}</p>
         {% else %}
-        <p>Админ</p>
+        <p>Админ: </p>
         {% endif %}
     {% endfor %}
 {% endblock main_section %}
